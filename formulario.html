@@ -6,83 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
 </head>
+
+<style>
+    .tabelaGeral{
+        background-color: rgb(248,13, 13);
+    }
+
+    .trGeral{
+        font-size: larger;
+        background-color: rgb(38,172,83);
+    }
+
+    td.TituloGeral{
+        font-size: larger;
+        background-color: rgb(173, 162,162);
+    }
+
+    .tdTitulo{
+        font-size: medium;
+        background-color: rgb(173,162,162);
+    }
+
+    .tdCampo{
+        background-color: black;
+    }
+</style>
+
 <body>
 
-    <table border="1">
-        <tr>
-            <th colspan="100%">
+    <table class="tabelaGeral" border="1">
+        <tr class="trGeral">
+            <td class= "tdTituloGeral colspan"100%">
                 Formulário: Cadastro de Clientes
-            </th>
+            </td>
         </tr>
 
         <tr>
-            <td>
+            <td class="tdTitulo">
                 Nome:
             </td>
-            <td>
+            <td class="tdCampo">
                 <input type="text" name="nome" id="nomeid">
             </td>
         </tr>
 
         <tr>
-            <td>
+            <td class="">
                 CEP: 
             </td>
-            <td>
+            <td class="">
                 <input type="number" name="cep" id="cepid">
             </td>
         </tr>
 
         <tr>
-            <td>
+            <td class="">
                 Endereço: 
             </td>
-            <td>
+            <td class="">
                 <input type="text" name="endereco" id="enderecoid">
             </td>
         </tr>
 
         <tr>
-            <td>
+            <td class="">
                 Telefone: 
             </td>
-            <td>
+            <td class="">
                 <input type="number" name="telefone" id="telefoneid">
             </td>
         </tr>
 
         <tr>
-            <td>
+            <td class="">
                 CPF: 
             </td>
-            <td>
+            <td class="">
                 <input type="number" name="cpf" id="cpfid">
             </td>
         </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </table>
+    </table>
                 
 </body>
 </html>
