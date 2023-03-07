@@ -63,12 +63,14 @@ legend{
     width: 100%;
     border: none;
     padding: 15px;
-    color: white;
+    color: black;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 #submit:hover{
     background-image: linear-gradient(to right, rgb(216,191,216), rgb(241, 225, 255));
+    font-weight: bold;
 }
