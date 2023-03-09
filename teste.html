@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+<script language = "javascript" src=""></script>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(216, 191, 216);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tabelaGeral{
+
+    }
+
+    .TituloGeral{   
+        font-size: 17px;
+        background-color: hotpink;
+        margin-bottom : .5em;
+        table-layout: fixed;
+        text-align: center;
+        padding: .7em;
+        text-align: center;
+    }
+
+    td, th{
+        padding: .7em;
+        margin: 0;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    table, th, td {
+        border: 1px solid #000;
+    }
+
+    .trGeral{
+        background-color: pink;
+        
+
+    }
+
+    .tdTitulo{  
+        background-color: pink;
+        
+        
+    }
+
+    table{
+        width: 400px;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        margin-left: 180px;
+        margin-top: -10x;
+        text-align: center;
+    }
+
+    .tdCampo{
+        background-color: pink;
+
+
+    }
+
+    .botao{
+        text-align: center;
+        margin-bottom: .5em;
+        table-layout: fixed;
+
+
+    }
+
+    a:link, a:visited{
+        background-color: pink;
+        color: whit;
+        padding: 14px 25px;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        width: 89%;
+    }
+
+    a:hover, a:active{
+        background-color: deeppink;
+    }
+</style>
+
+<body>
+    <table class="tabelaGeral" align="center" >
+    
+        <tr class="trGeral">
+            <th class= "TituloGeral colspan="100%" colspan="2"><b>Cadastro de Clientes</b><br></th>
+            
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">Nome:</td>
+            <td class="tdCampo"><input type="text" name="nome" id="nomeid" required></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">CEP:</td>
+            <td class="tdCampo"><input type="number" name="cep" id="cepid" required></td>
+        </tr>
+
+        <br>
+        <tr>
+            <td class="tdTitulo">Endereço: </td>
+            <td class="tdCampo"><input type="text" name="endereco" id="enderecoid" required></td>
+        </tr>
+
+        <br>
+        <tr>
+            <td class="tdTitulo">Telefone: </td>
+            <td class="tdCampo"><input type="number" name="telefone" id="telefoneid" required></td>
+        </tr>
+
+        <br>
+        <tr>
+            <td class="tdTitulo">CPF: </td>
+            <td class="tdCampo"><input type="number" name="cpf" id="cpfid" required></td>
+        </tr>
+
+        <tr>
+            <td colspan="100%" align="center">
+                <a href="" name="Cadastro" value="Cadastrar" class="botao">Cadastra-se</a>
+            </td>
+        </tr>
+
+    </table>          
+</body>
+</html>
