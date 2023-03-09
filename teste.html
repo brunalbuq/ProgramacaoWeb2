@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+<script language = "javascript" src=""></script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .tabelaGeral{
+        background: pink;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .trGeral{
+        background: purple;
+        text-align: center;
+    }
+    
+    .tdTituloGeral{
+        background: orange;
+        text-align: center;
+    }
+
+    .tdCampo{
+        background: black;
+    }
+
+
+    #submit{
+        background-image: linear-gradient(to right, rgb(216,191,216), rgb(255,228,225));
+        
+        border: none;
+        padding: 15px;
+        color: black;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+        align:"center";
+    }
+</style>
+
+<body>
+    <table class="tabelaGeral" align="center">
+        <tr class="trGeral">
+            <th class= "tdTituloGeral colspan"100%" ><b>Cadastro de Clientes</b><br></th>            
+        </tr>
+
+
+        <tr>
+            <td class="tdTitulo">Nome:</td>
+            <td class="tdCampo"><br><input type="text" name="nome" id="nomeid" required></td>     
+        </tr>
+
+        <br>
+        <tr>
+            <td class="tdTitulo">CEP:</td>
+            <td class="tdCampo"><br><input type="number" name="cep" id="cepid"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">Endereço:</td>
+            <td class="tdCampo"><br><input type="text" name="endereco" id="enderecoid"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">Telefone:</td>
+            <td class="tdCampo"><br><input type="number" name="telefone" id="telefoneid"></td>
+        </tr>
+
+        <tr>
+            <td class="">CPF:</td>
+            <td class=""><br><input type="number" name="cpf" id="cpfid"></td>
+        </tr>
+
+        
+        <input type="submit" name="cadastro" id="submit" value="Cadastra-se">
+    </table>
+                
+</body>
+</html>
