@@ -9,14 +9,15 @@
 <script language = "javascript" src=""></script>
 <style>
     body {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
     }
 
     .tabelaGeral{
-        background: pink;
+        background-color: pink;
+        border-radius: 10px;
     }
 
     a {
@@ -25,38 +26,70 @@
     }
 
     .trGeral{
-        background: purple;
-        text-align: center;
+        background-color: pink;
+        font-size: larger;
     }
     
     .tdTituloGeral{
-        background: orange;
         text-align: center;
+        font-size: 17px;
+        padding: 10px;
+        auto: 10px;
+        background-color: #8B3A62;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: initial;
+        width: 100%;
+        align-content: center;
+        align-self: auto;
     }
+
+     .tdTitulo{
+        text-align: left;
+        font-size: 14px;
+        padding: 10px;
+        color: black;
+        background-color: pink;
+        width: 150px;
+        border: solid 1px;
+     }
 
     .tdCampo{
-        background: black;
-    }
-
-
-    #submit{
-        background-image: linear-gradient(to right, rgb(216,191,216), rgb(255,228,225));
+        background-color: pink;
         
-        border: none;
-        padding: 15px;
-        color: black;
-        font-size: 15px;
-        cursor: pointer;
-        border-radius: 10px;
-        font-weight: bold;
-        align:"center";
     }
+    a:link, a:visited {
+        background-color: #CD6090;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      a:hover, a:active {
+        background-color: #8B3A62;;
+      }
+
+      .botao{
+        width: 86%;
+      }
+
+      table{
+        border: 1px solid black;
+      }
+
+      th{
+        text-align: center;
+      }
+
 </style>
 
 <body>
-    <table class="tabelaGeral" align="center">
+    <table class="tabelaGeral" align="center"  border="1" colspan="2">
         <tr class="trGeral">
-            <th class= "tdTituloGeral colspan"100%" ><b>Cadastro de Clientes</b><br></th>            
+            <td class= "tdTituloGeral" colspan="2"><b>Cadastro de Clientes</b><br></td>            
         </tr>
 
 
@@ -82,12 +115,16 @@
         </tr>
 
         <tr>
-            <td class="">CPF:</td>
-            <td class=""><br><input type="number" name="cpf" id="cpfid"></td>
+            <td class="tdTitulo">CPF:</td>
+            <td class="tdCampo"><br><input type="number" name="cpf" id="cpfid"></td>
         </tr>
 
         
-        <input type="submit" name="cadastro" id="submit" value="Cadastra-se">
+        <tr>
+            <td colspan="100%" align="center">
+                <a href="" name="cadastro" value="Cadastro" class="botao"><b>Cadastra-se</b></a>
+            </td>
+        </tr>
     </table>
                 
 </body>
