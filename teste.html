@@ -5,86 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="estilos.css"/>
 </head>
 <script language = "javascript" src=""></script>
-<style>
-    body {
-        margin: 0 auto;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-    }
-
-    .tabelaGeral{
-        background-color: pink;
-        border-radius: 10px;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .trGeral{
-        background-color: pink;
-        font-size: larger;
-    }
-    
-    .tdTituloGeral{
-        text-align: center;
-        font-size: 17px;
-        padding: 10px;
-        auto: 10px;
-        background-color: #8B3A62;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: initial;
-        width: 100%;
-        align-content: center;
-        align-self: auto;
-    }
-
-     .tdTitulo{
-        text-align: left;
-        font-size: 14px;
-        padding: 10px;
-        color: black;
-        background-color: pink;
-        width: 150px;
-        border: solid 1px;
-     }
-
-    .tdCampo{
-        background-color: pink;
-        
-    }
-    a:link, a:visited {
-        background-color: #CD6090;
-        color: white;
-        padding: 14px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      a:hover, a:active {
-        background-color: #8B3A62;;
-      }
-
-      .botao{
-        width: 86%;
-      }
-
-      table{
-        border: 1px solid black;
-      }
-
-      th{
-        text-align: center;
-      }
-
-</style>
 
 <body>
     <table class="tabelaGeral" align="center"  border="1" colspan="2">
@@ -95,7 +18,7 @@
 
         <tr>
             <td class="tdTitulo">Nome:</td>
-            <td class="tdCampo"><br><input type="text" name="nome" id="nomeid" required></td>     
+            <td class="tdCampo"><br><input type="text" name="nome" id="nomeid"></td>     
         </tr>
 
         <br>
@@ -111,7 +34,7 @@
 
         <tr>
             <td class="tdTitulo">Telefone:</td>
-            <td class="tdCampo"><br><input type="number" name="telefone" id="telefoneid"></td>
+            <td class="tdCampo"><br><input type="number" name="telefone" id="telefoneid" placeholder="(00) 00000-0000"></td>
         </tr>
 
         <tr>
@@ -119,13 +42,47 @@
             <td class="tdCampo"><br><input type="number" name="cpf" id="cpfid"></td>
         </tr>
 
+        <tr>
+            <td class="tdTitulo">E-mail:</td>
+            <td class="tdCampo"><input type="text" name="e-mail" id="emailid" onblur="validacaoemail(this)" maxlength="60" size="20"></td>
+        </tr>
+
         
         <tr>
             <td colspan="100%" align="center">
-                <a href="" name="cadastro" value="Cadastro" class="botao"><b>Cadastra-se</b></a>
+                <a href="#" onclick="validar('cpf')" name="cadastro" value="Cadastro" class="botao"><b>Cadastra-se</b></a>
             </td>
         </tr>
     </table>
+
+    <script>
+        function validar(param){
+            if(document.getElementById("nomeid").value==0){
+                alert("Campo nome obrigatório");
+            }
+            if(document.getElementById("cepid").value==0){
+                alert("Campo cep obrigatório");
+            }
+            if(document.getElementById("enderecoid").value==0){
+                alert("Campo endereço obrigatório");
+            }
+            if(document.getElementById("telefoneid").value==0){
+                alert("Campo telefone obrigatório");
+            }
+            if(document.getElementById("cpfid").value==0){
+                alert("Campo cpf obrigatório");
+            }
+        }
+    </script>
+
+    <script>
+        function validacaoemail(field){
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@")+1, field.value.length)
+            alert(usuario);
+            alert(dominio);
+        }
+    </script>
                 
 </body>
 </html>

@@ -1,0 +1,75 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.tabelaGeral{
+    background-color: pink;
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.trGeral{
+    background-color: pink;
+    font-size: larger;
+}
+
+.tdTituloGeral{
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    auto: 10px;
+    background-color: #8B3A62;
+    display: flex;
+    flex-direction: row;
+    align: center;
+   
+    width: 160;
+    align-content: center;
+    align-self: auto;
+}
+
+ .tdTitulo{
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    color: black;
+    background-color: pink;
+    width: 150px;
+    border: solid 1px;
+ }
+
+.tdCampo{
+    background-color: pink;
+    
+}
+a:link, a:visited {
+    background-color: #CD6090;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover, a:active {
+    background-color: #8B3A62;;
+  }
+
+  .botao{
+    width: 86%;
+  }
+
+  table{
+    border: 1px solid black;
+  }
+
+  th{
+    text-align: center;
+  }
