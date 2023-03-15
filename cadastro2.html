@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="_css/estilos.css"/>
+</head>
+<script language = "javascript" src=""></script>
+
+<body>
+    <table class="tabelaGeral" align="center"  border="1" colspan="2">
+        <tr class="trGeral">
+            <td class= "tdTituloGeral colspan='100%'" colspan="2"><b>Cadastro de Clientes</b><br></td>            
+        </tr>
+
+
+        <tr>
+            <td class="tdTitulo">Nome Completo:</td>
+            <td class="tdCampo"><br><input type="text" name="nome" id="nomeid" placeholder="enter your name"></td>     
+        </tr>
+
+        <br>
+        <tr>
+            <td class="tdTitulo">CEP:</td>
+            <td class="tdCampo"><br><input type="number" name="cep" id="cepid" placeholder="00000-000"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">Endereço:</td>
+            <td class="tdCampo"><br><input type="text" name="endereco" id="enderecoid" placeholder="enter your address"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">Telefone:</td>
+            <td class="tdCampo"><br><input type="number" name="telefone" id="telefoneid" placeholder="(00) 00000-0000"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">CPF:</td>
+            <td class="tdCampo"><br><input type="number" name="cpf" id="cpfid" placeholder="000.000.000-00"></td>
+        </tr>
+
+        <tr>
+            <td class="tdTitulo">E-mail:</td>
+            <td class="tdCampo"><input type="text" name="e-mail" id="emailid" onblur="validacaoemail(this)" maxlength="60" size="20" placeholder="enter your e-mail"></td>
+        </tr>
+
+        
+        <tr>
+            <td colspan="100%" align="center">
+                <a href="#" onclick="validar('cpf')" name="cadastro" value="Cadastro" class="botao"><b>Cadastra-se</b></a>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // if (va==va2) {alert ok} else { }
+        function validar(param){
+            // document.getElementById("idnome").value
+            if(document.getElementById("nomeid").value==0){
+                alert("Campo Nome obrigatório");
+            }
+            if(document.getElementById("cepid").value==0){
+                alert("Campo CEP obrigatório");
+            }
+            if(document.getElementById("enderecoid").value==0){
+                alert("Campo Endereço obrigatório");
+            }
+            if(document.getElementById("telefoneid").value==0){
+                alert("Campo Telefone obrigatório");
+            }
+            if(document.getElementById("cpfid").value==0){
+                alert("Campo CPF obrigatório");
+            }
+        }
+    </script>
+
+    <script>
+        function validacaoemail(field){
+            usuario = field.value.substring(0, field.value.indexOf("@"));
+            dominio = field.value.substring(field.value.indexOf("@")+1, field.value.length);
+            alert(usuario);
+            alert(dominio);
+            if ((usuario.length >=1) &&
+                (dominio.length >=3) &&
+                (usuario.search("@")==-1) &&
+                (dominio.search("@")==-1) &&
+                (usuario.search(" ")==-1) &&
+                (dominio.search(" ")==-1) &&
+                (dominio.search(".")!=-1) &&
+                (dominio.indexOf(".")>=1) &&
+                (dominio.lastindexOF(".") < dominio.length -1)) {
+            document.getElementById("msgemail").innerHTML = "E-mail válido";
+            alert("E-mail válido");
+            }
+            else{
+            document.getElementById("msgemail").innerHTML = "<font color='red'> E-mail inválido </font>";
+            alert("E-mail inválido");
+            }
+            }
+    </script>
+                
+</body>
+</html>
