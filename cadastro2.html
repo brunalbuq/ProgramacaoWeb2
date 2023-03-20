@@ -49,12 +49,84 @@
 
         
         <tr>
+            <td class="tdTitulo">Profissão:</td>
+            <td class="tdCampo">
+                <select id="DE_ESPECIALIDADE_SELECIONADA" style="display:non">
+            <option value="">Seleciona uma especialidade</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Engenheiro">Engenheiro</option>
+                    <option value="Médico">Médico</option>
+                    <option value="1">Professor</option>
+                </select> <input type="text" placeholder="Buscar especialidade" style="width:300px;"
+                onkeyup="fnBuscaSelectEspecifico(this,'DE_ESPECIALIDADE_SELECIONADA');" id="value">
+            <img width="20px" height="20px" src=
+            "https://pt.pngtree.com/freepng/down-glyph-black-icon_4008289.html">
+                <div id="msprofissao" style="display:none; position:absolute; background-color:#B0C4DE; overflow: auto; width:300px; height: 25px; border:solid 1px"></div>
+            </td>
+        </tr>
+        
+        <tr>
             <td colspan="100%" align="center">
                 <a href="#" onclick="validar('cpf')" name="cadastro" value="Cadastro" class="botao"><b>Cadastra-se</b></a>
             </td>
         </tr>
+
     </table>
 
+    <script language='JavaScript'>
+        function fnBuscaSelectEspecifico (busca,select){
+        var valoraBuscar = busca.value;
+    var buscarid=busca.id;
+    var valoraBuscarSemFormatacao = valoraBuscar.replace(/(\.|\(|\)|\/|\-|)+/g,'');
+    var valoraBuscarFormatado="";
+    document.getElementById("msprofissao").innerHTML="";
+    valoraBuscar=valoraBuscar.toLowerCase();
+    var selectedTrends = document.getElementById(select);
+    selectedTrends.style.display="none";
+    valorIndex=selectedTrends.selected.Index;
+    var soprimeiro=true;
+    var soprimeiroSelecionado='0';
+    
+    for(var i=1; i <selectedTrends.length; i++)
+    {
+        valorTextSelectMaiusculo=selectedTrends.option[i].text;
+        valueSelecionado=selectedTrends.options[i].value;
+        valorTextSelect=valorTextSelectMaiusculo;
+        valorTextSelect=valorTextSelect.toLowerCase();
+
+        resultadodaBusca = false;
+        if (valoraBuscarFormatado!=''){
+            if((valorTextSelect.indexOf(valoraBuscarSemFormatacao)>-1) || (valorTextSelect.indexOf(valoraBuscarFormatado)>-1)) {
+                resultadodaBusca = true;
+            };
+        } else{
+            if(valorTextSelect.indexOf(valoraBuscar)>-1){
+                if (valorTextSelectMaiusculo!="Nenhum dado encontrado para essa pesquisa."){
+if(valorTextSelectMaiusculo!=''){
+                document.getElementById("msprofissao").innerHTML
+                document.getElementById("msprofissao").innerHTML+"<a href=# onClick=\"fnSelecionarOpcao('"+selectedTrends.id+"';'"+ valueSelecionado+"')\";>"+valorTextSelectMaiusculo+"</a></br>";
+}
+                }
+            }
+                resultadodaBusca = true;
+            };
+    };
+    //se achou o dado dentro do que digitou então mostra.
+    if (resultadodaBusca==true){
+        if (soprimeiro){
+            soprimeiro=false;
+            valorIndex=i;
+        }
+        //se entrou aqui tem algum dado encontrado.
+        if(valorTextSelect=="Nenhum dado encontrado para essa pesquisa."){
+            selectedTrends.options[i].style.display="none";
+        } else{
+            
+        }
+    }
+    }
+    </script>
+        
     <script>
         // if (va==va2) {alert ok} else { }
         function validar(param){
@@ -77,11 +149,12 @@
         }
     </script>
 
-    <script>
+    <script language='JavaScript'>
         function validacaoemail(field){
             usuario = field.value.substring(0, field.value.indexOf("@"));
-            dominio = field.value.substring(field.value.indexOf("@")+1, field.value.length);
-            alert(usuario);
+            dominio = field.value.substring(field.value.indexOf("@")+1, 
+            field.value.length);
+                alert(usuario);
             alert(dominio);
             if ((usuario.length >=1) &&
                 (dominio.length >=3) &&
@@ -101,6 +174,8 @@
             }
             }
     </script>
+
+    <script></script>
                 
 </body>
 </html>
