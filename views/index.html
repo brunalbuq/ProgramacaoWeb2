@@ -1,0 +1,16 @@
+<!DOCTYPE html> //views/index.html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% usuarios.forEach ((usuario)=>{ %>
+    <p><a href="/editar/<%= usuario.id %>">Clique no Nome para alterar:<%= usuario.nome %> </a>Cpf:<%= usuario.cpf %> - 
+    Endereço:<%= usuario.endereco %> <a href="/deletar/<%= usuario.id %>"> Clique aqui para deletar</a> </p>
+    <% }) %>
+        <a href="/cadastrar">Cadastrar novos usuários</a>
+</body>
+</html>
